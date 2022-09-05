@@ -3,6 +3,7 @@ import Input from "./components/Input";
 import { useForm } from "react-hook-form";
 import CardFront from "./components/CardFront";
 import { useEffect, useState } from "react";
+import CardBack from "./components/CardBack";
 
 function App() {
   const [formattedNumber, setFormattedNumber] = useState([]);
@@ -35,17 +36,20 @@ function App() {
       watch("number")[14] || 0,
       watch("number")[15] || 0,
     ]);
-  }, [watch("number")]); // a very complicated way to add space between each four numbers sorry but this is the first thing that came to mind and I didn't want to waste a lot of time here
+  }, [watch("number")]); // a very ugly way to add space between each four numbers i'm sure there are simpler solutions  but this is the first thing that came to mind and I didn't want to waste a lot of time here
   const onSubmit = (data) => console.log(data);
   return (
     <div className="h-screen w-screen bg-gradient-to-r from-violet-500 to-fuchsia-50 flex justify-center items-center">
       <div className="sm:w-[1440px]  sm:h-[900px]  flex flex-col sm:flex-row w-screen h-screen relative">
-        <div className="absolute">
+        <div className="absolute sm:top-44 sm:left-28 z-50 w-[78vw] top-32 left-4 sm:w-full">
           <CardFront control={control} number={formattedNumber.join("")} />
+        </div>
+        <div className="absolute sm:bottom-48 sm:left-44 w-[78vw] top-6 left-16 sm:w-full">
+          <CardBack control={control} number={formattedNumber.join("")} />
         </div>
         <div className="sm:w-[30%] sm:bg-desktop sm:h-full bg-mobile sm:bg-no-repeat w-full h-[30%]"></div>
         <div className="w-full flex justify-center items-center h-full bg-white">
-          <div className="sm:w-1/2 lg:w-[33%] w-full px-6">
+          <div className="sm:w-1/2 lg:w-[33%] w-full px-6 sm:-mr-48 sm:-mt-0 -mt-44">
             <form onSubmit={handleSubmit(onSubmit)}>
               <Input
                 register={register}
@@ -95,7 +99,7 @@ function App() {
                     constraints={{
                       required: "Can't be blank",
                       pattern: {
-                        value: /^(20[2-9]\d|2050)$/,
+                        value: /^(2[2-9]|9[0-9])$/,
                         message: "Not a valid year",
                       },
                     }}
