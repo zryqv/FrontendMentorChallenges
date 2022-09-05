@@ -1,22 +1,48 @@
-import DateInput from "./components/DateInput";
 import Input from "./components/Input";
-import cardBack from "./img/bg-card-back.png";
-import cardFront from "./img/bg-card-front.png";
-import { ReactComponent as CardLogo } from "./img/card-logo.svg";
+// import cardBack from "./img/bg-card-back.png";
 import { useForm } from "react-hook-form";
+import CardFront from "./components/CardFront";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [formattedNumber, setFormattedNumber] = useState([]);
   const {
     register,
+    control,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
+  useEffect(() => {
+    setFormattedNumber([
+      watch("number")[0] || 0,
+      watch("number")[1] || 0,
+      watch("number")[2] || 0,
+      watch("number")[3] || 0,
+      " ",
+      watch("number")[4] || 0,
+      watch("number")[5] || 0,
+      watch("number")[6] || 0,
+      watch("number")[7] || 0,
+      " ",
+      watch("number")[8] || 0,
+      watch("number")[9] || 0,
+      watch("number")[10] || 0,
+      watch("number")[11] || 0,
+      " ",
+      watch("number")[12] || 0,
+      watch("number")[13] || 0,
+      watch("number")[14] || 0,
+      watch("number")[15] || 0,
+    ]);
+  }, [watch("number")]); // a very complicated way to add space between each four numbers sorry but this is the first thing that came to mind and I didn't want to waste a lot of time here
   const onSubmit = (data) => console.log(data);
-  // console.log(watch("hello"));
   return (
     <div className="h-screen w-screen bg-gradient-to-r from-violet-500 to-fuchsia-50 flex justify-center items-center">
-      <div className="sm:w-[1440px]  sm:h-[900px]  flex flex-col sm:flex-row w-screen h-screen">
+      <div className="sm:w-[1440px]  sm:h-[900px]  flex flex-col sm:flex-row w-screen h-screen relative">
+        <div className="absolute">
+          <CardFront control={control} number={formattedNumber.join("")} />
+        </div>
         <div className="sm:w-[30%] sm:bg-desktop sm:h-full bg-mobile sm:bg-no-repeat w-full h-[30%]"></div>
         <div className="w-full flex justify-center items-center h-full bg-white">
           <div className="sm:w-1/2 lg:w-[33%] w-full px-6">
