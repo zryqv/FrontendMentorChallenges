@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/FrontendMentorChallenges-interactivecard%20%20/static/css/main.86571024.css",
-    "main.js": "/FrontendMentorChallenges-interactivecard%20%20/static/js/main.460db89d.js",
-    "static/media/bg-main-desktop.png": "/FrontendMentorChallenges-interactivecard%20%20/static/media/bg-main-desktop.806e7aa7b4dbc1d78bc3.png",
-    "static/media/bg-card-back.png": "/FrontendMentorChallenges-interactivecard%20%20/static/media/bg-card-back.23f68fa3aa3d5b33dfc8.png",
-    "static/media/bg-card-front.png": "/FrontendMentorChallenges-interactivecard%20%20/static/media/bg-card-front.8153e2ca184402a8385f.png",
-    "static/media/bg-main-mobile.png": "/FrontendMentorChallenges-interactivecard%20%20/static/media/bg-main-mobile.caa4689407777a312ede.png",
-    "index.html": "/FrontendMentorChallenges-interactivecard%20%20/index.html",
-    "static/media/card-logo.svg": "/FrontendMentorChallenges-interactivecard%20%20/static/media/card-logo.8ca9036515954c3f8191559dce9c7bdf.svg",
-    "main.86571024.css.map": "/FrontendMentorChallenges-interactivecard%20%20/static/css/main.86571024.css.map",
-    "main.460db89d.js.map": "/FrontendMentorChallenges-interactivecard%20%20/static/js/main.460db89d.js.map"
+    "main.css": "/FrontendMentorChallenges-interactivecard/static/css/main.f42e4dcd.css",
+    "main.js": "/FrontendMentorChallenges-interactivecard/static/js/main.20ab3123.js",
+    "static/media/bg-main-desktop.png": "/FrontendMentorChallenges-interactivecard/static/media/bg-main-desktop.806e7aa7b4dbc1d78bc3.png",
+    "static/media/bg-card-back.png": "/FrontendMentorChallenges-interactivecard/static/media/bg-card-back.23f68fa3aa3d5b33dfc8.png",
+    "static/media/bg-card-front.png": "/FrontendMentorChallenges-interactivecard/static/media/bg-card-front.8153e2ca184402a8385f.png",
+    "static/media/bg-main-mobile.png": "/FrontendMentorChallenges-interactivecard/static/media/bg-main-mobile.caa4689407777a312ede.png",
+    "index.html": "/FrontendMentorChallenges-interactivecard/index.html",
+    "static/media/card-logo.svg": "/FrontendMentorChallenges-interactivecard/static/media/card-logo.8ca9036515954c3f8191559dce9c7bdf.svg",
+    "main.f42e4dcd.css.map": "/FrontendMentorChallenges-interactivecard/static/css/main.f42e4dcd.css.map",
+    "main.20ab3123.js.map": "/FrontendMentorChallenges-interactivecard/static/js/main.20ab3123.js.map"
   },
   "entrypoints": [
-    "static/css/main.86571024.css",
-    "static/js/main.460db89d.js"
+    "static/css/main.f42e4dcd.css",
+    "static/js/main.20ab3123.js"
   ]
 }
