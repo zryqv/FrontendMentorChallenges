@@ -1,6 +1,7 @@
 import cardFront from "../img/bg-card-front.png";
 import { ReactComponent as CardLogo } from "../img/card-logo.svg";
 import { useWatch } from "react-hook-form";
+
 function CardFront({ control, number }) {
   const name = useWatch({
     control,
