@@ -97,6 +97,7 @@ function App() {
               <div className="sm:w-[54%] md:w-[54%] w-full px-6 sm:-mr-[14rem]">
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <Input
+                    placeholder="e.g. Jane Appleseed"
                     register={register}
                     inputName={"name"}
                     label="Cardholder name"
@@ -104,7 +105,7 @@ function App() {
                     error={errors.name && errors.name.message}
                   />
                   <Input
-                    type="tel"
+                    placeholder="e.g. 1234 5678 9123 0000"
                     register={register}
                     inputName={"number"}
                     label="Card number"
@@ -123,7 +124,7 @@ function App() {
                     </div>
                     <div className="w-[23%] mr-2">
                       <Input
-                        type="month"
+                        placeholder="MM"
                         register={register}
                         inputName={"date"}
                         label=" &nbsp;"
@@ -139,7 +140,7 @@ function App() {
                     </div>
                     <div className="w-[23%] mr-4">
                       <Input
-                        type="date"
+                        placeholder="YY"
                         register={register}
                         inputName={"year"}
                         label=" &nbsp;"
@@ -156,6 +157,7 @@ function App() {
                     </div>
                     <div className="w-[46.5%]">
                       <Input
+                        placeholder="e.g. 123"
                         register={register}
                         inputName={"cvc"}
                         label="CVC"
