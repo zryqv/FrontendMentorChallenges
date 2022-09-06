@@ -51,7 +51,7 @@ function App() {
     <div className="h-screen w-screen bg-gradient-to-r from-violet-500 to-fuchsia-50 flex justify-center items-center">
       <div className="sm:w-[1440px]  sm:h-[900px]  flex flex-col sm:flex-row w-screen h-screen relative">
         {/* card back */}
-        <div className="absolute text-white right-[3%] top-[3%] sm:top-[49%] sm:right-0 sm:left-[7%] md:left-[14%] lg:left-[26%]  w-fit">
+        <div className="absolute text-white right-[3%] top-[3%] sm:top-[49%] sm:right-0 sm:left-[7%] md:left-[14%] lg:left-[26%] xl:left-[20%]  w-fit">
           <div className="relative w-72 sm:w-[20rem] md:w-[25rem] lg:w-fit">
             <img src={cardBack} alt="" />
             <div className="absolute top-[44%] sm:top-[43.5%] md:top-[45%] right-[14%] tracking-widest sm:text-sm text-xs">
