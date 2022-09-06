@@ -104,6 +104,7 @@ function App() {
                     error={errors.name && errors.name.message}
                   />
                   <Input
+                    type="tel"
                     register={register}
                     inputName={"number"}
                     label="Card number"
@@ -122,8 +123,9 @@ function App() {
                     </div>
                     <div className="w-[23%] mr-2">
                       <Input
+                        type="month"
                         register={register}
-                        inputName={"month"}
+                        inputName={"date"}
                         label=" &nbsp;"
                         constraints={{
                           required: "Can't be blank",
@@ -137,6 +139,7 @@ function App() {
                     </div>
                     <div className="w-[23%] mr-4">
                       <Input
+                        type="date"
                         register={register}
                         inputName={"year"}
                         label=" &nbsp;"
