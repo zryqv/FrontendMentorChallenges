@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import CardFront from "./components/CardFront";
 import { useEffect, useState } from "react";
 import CardBack from "./components/CardBack";
+import cardBack from "./img/bg-card-back.png";
+import cardFront from "./img/bg-card-front.png";
+import { ReactComponent as CardLogo } from "./img/card-logo.svg";
 
 function App() {
   const [formattedNumber, setFormattedNumber] = useState([]);
@@ -41,13 +44,42 @@ function App() {
   return (
     <div className="h-screen w-screen bg-gradient-to-r from-violet-500 to-fuchsia-50 flex justify-center items-center">
       <div className="sm:w-[1440px]  sm:h-[900px]  flex flex-col sm:flex-row w-screen h-screen relative">
-        <div className="absolute sm:top-44 sm:left-28 z-50 w-[78vw] top-32 left-4 sm:w-full">
+        {/* card back */}
+        <div className="absolute text-white right-[3%] top-[3%] sm:top-[49%] sm:right-0 sm:left-[7%] md:left-[25%] w-fit">
+          <div className="relative w-72 sm:w-[20rem] md:w-[25rem] lg:w-fit">
+            <img src={cardBack} alt="" />
+            <div className="absolute top-[44%] sm:top-[43.5%] md:top-[45%] right-[14%] tracking-widest sm:text-sm text-xs">
+              {watch("cvc") || "000"}
+            </div>
+          </div>
+        </div>
+        {/* card front */}
+        <div className="absolute text-white left-[4%] top-[12.4%] sm:top-[27%] md:left-[12%] md:top-[21%]">
+          <div className="relative w-72 sm:w-[20rem] md:w-[25rem]  lg:w-fit">
+            <img src={cardFront} alt="" />
+            <CardLogo className="absolute top-[5%] left-[5%]" />
+            <div className="absolute top-[50%] right-0 left-0 mx-auto px-4  w-fit">
+              <div className="mb-4 md:mb-9 md:text-2xl text-lg   w-full tracking-widest ">
+                {formattedNumber.join("") || "000 0000 0000 0000"}
+              </div>
+              <div className=" flex justify-between   w-full">
+                <div className="uppercase sm:text-md text-xs  tracking-widest">
+                  {watch("name") || "JANE APPLESEED"}
+                </div>
+                <div className="uppercase sm:text-md text-xs  tracking-widest">
+                  {watch("month") || "00"}/{watch("year") || "00"}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div className="absolute z-50 w-[78vw]  sm:w-fit sm:top-44 sm:left-28 top-32 left-4">
           <CardFront control={control} number={formattedNumber.join("")} />
         </div>
-        <div className="absolute sm:bottom-48 sm:left-44 w-[78vw] top-6 left-16 sm:w-full">
+        <div className="absolute  w-[78vw]  sm:w-fit sm:bottom-48 sm:left-44 top-6 left-16">
           <CardBack control={control} number={formattedNumber.join("")} />
-        </div>
-        <div className="sm:w-[30%] sm:bg-desktop sm:h-full bg-mobile sm:bg-no-repeat w-full h-[30%]"></div>
+        </div> */}
+        <div className="sm:max-w-[483px] sm:bg-desktop sm:h-full bg-mobile sm:bg-no-repeat w-full h-[30%]"></div>
         <div className="w-full flex justify-center items-center h-full bg-white">
           <div className="sm:w-1/2 lg:w-[33%] w-full px-6 sm:-mr-48 sm:-mt-0 -mt-44">
             <form onSubmit={handleSubmit(onSubmit)}>
