@@ -126,7 +126,7 @@ function App() {
                       <Input
                         placeholder="MM"
                         register={register}
-                        inputName={"date"}
+                        inputName={"month"}
                         label=" &nbsp;"
                         constraints={{
                           required: "Can't be blank",
